@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { LoginResponse } from '../DTO/login-response';
-import { Contract } from '../DTO/contract';
+import { Contact } from '../DTO/contact';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,6 @@ import { Contract } from '../DTO/contract';
 export abstract class CommService {
 
   constructor() { }
-  abstract Login(value:any):Observable<LoginResponse>
-  abstract getContracts(userName:string):Observable<Array<Contract>>
+  abstract Login(value: any): Observable<LoginResponse>
+  abstract getContracts(userName: string): Observable<Array<Contact>>
 }

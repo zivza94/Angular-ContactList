@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Contract } from '../DTO/contract';
+import { Contact } from '../DTO/contact';
 import { CommService } from './comm.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ContractService {
-  getContracts(userName: String):Observable<Array<Contract>> {
+export class ContactService {
+  getContracts(userName: string): Observable<Array<Contact>> {
     return this.commService.getContracts(userName);
   }
 
-  constructor(private commService:CommService) { }
+  constructor(private commService: CommService) { }
 }

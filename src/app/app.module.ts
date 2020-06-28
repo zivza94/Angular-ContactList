@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommService } from './Services/comm.service';
 import { LocalCommService } from './Services/local-comm.service';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LocalCommService } from './Services/local-comm.service';
     GroupsComponent,
     ContactsComponent,
     LogoutComponent,
-    HomeComponent
+    HomeComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

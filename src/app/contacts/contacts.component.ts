@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ContractService } from '../Services/contract.service';
-import { Contract } from '../DTO/contract';
+import { ContactService } from '../Services/contact.service';
+import { Contact } from '../DTO/contact';
 
 @Component({
   selector: 'app-contacts',
@@ -8,15 +8,15 @@ import { Contract } from '../DTO/contract';
   styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
-  contracts:Array<Contract>
-  image:ImageBitmap
-  constructor(private contractService:ContractService) { }
+  contacts: Array<Contact>
+  image: ImageBitmap
+  constructor(private contractService: ContactService) { }
 
   ngOnInit(): void {
   }
-  getcontracts(userName:String){
+  getcontracts(userName: string) {
     this.contractService.getContracts(userName)
-    .subsribe()
+      .subscribe()
   }
 
 }
