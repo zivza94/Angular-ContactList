@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "home", component: HomeComponent },
   { path: "register", component: RegisterComponent },
-  { path: "login", component: LoginComponent },
+  { path: "login", component: LoginComponent,outlet:"popup"},
   { path: "groups", component: GroupsComponent },
   { path: "contacts", component: ContactsComponent }];
 
