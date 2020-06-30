@@ -13,6 +13,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommService } from './Services/comm.service';
 import { LocalCommService } from './Services/local-comm.service';
 import { RegisterComponent } from './register/register.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactComponent } from './contact/contact.component';
+
 
 @NgModule({
   declarations: [
@@ -23,12 +26,17 @@ import { RegisterComponent } from './register/register.component';
     ContactsComponent,
     LogoutComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    ContactComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NoopAnimationsModule
+
+    
   ],
   providers: [{provide:CommService,useClass:LocalCommService}],
   bootstrap: [AppComponent]
