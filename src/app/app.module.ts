@@ -14,7 +14,10 @@ import { CommService } from './Services/comm.service';
 import { LocalCommService } from './Services/local-comm.service';
 import { RegisterComponent } from './register/register.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { ContactComponent } from './contact/contact.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { AddContactComponent } from './add-contact/add-contact.component';
+import { AddGroupComponent } from './add-group/add-group.component';
 
 
 @NgModule({
@@ -27,18 +30,18 @@ import { ContactComponent } from './contact/contact.component';
     LogoutComponent,
     HomeComponent,
     RegisterComponent,
-    ContactComponent
-
+    AddContactComponent,
+    AddGroupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NoopAnimationsModule
-
-    
+    NoopAnimationsModule,
+    MatButtonModule,
+    MatIconModule
   ],
-  providers: [{provide:CommService,useClass:LocalCommService}],
+  providers: [{ provide: CommService, useClass: LocalCommService }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,8 +7,8 @@ import { CommService } from './comm.service';
   providedIn: 'root'
 })
 export class ContactService {
-  getContracts(userName: string): Observable<Array<Contact>> {
-    return this.commService.getContracts(userName);
+  getContacts(userName: string): Observable<Array<Contact>> {
+    return this.commService.getContacts(userName);
   }
 
   constructor(private commService: CommService) { }

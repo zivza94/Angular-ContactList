@@ -10,5 +10,5 @@ export abstract class CommService {
 
   constructor() { }
   abstract Login(value: any): Observable<LoginResponse>
-  abstract getContracts(userName: string): Observable<Array<Contact>>
+  abstract getContacts(userName: string): Observable<Array<Contact>>
 }
