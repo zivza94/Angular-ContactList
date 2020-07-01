@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactService } from '../Services/contact.service';
 import { Contact } from '../DTO/contact';
-import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl, FormArray } from '@angular/forms';
 
